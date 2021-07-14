@@ -7,13 +7,13 @@
     --body-font: 'Poppins', sans-serif;
     --cursive-font: 'Niconne', cursive;
 }
-*{
-    box-sizing: border-box;
-}
-body{
-    margin: 0;
-}
-section{ padding: 0 20px;}
+
+*{ box-sizing: border-box; }
+
+body{ margin: 0; }
+
+section{ padding: 0 20px; }
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -336,6 +336,7 @@ footer div:first-of-type{
     .home-title{ font-size: 36px; }
 
     .right-side{ justify-content: center; }
+    
     .home .banner img{
         width: auto;
         max-width: 100%;
@@ -344,11 +345,11 @@ footer div:first-of-type{
 
     .players .container{padding-top: 50px;}
 
+
     .album-heading{ font-size: 30px; }
+
 
     .footer-image{ width: 150px; }
     .footer-title{ font-size: 30px; }
     .icon-wrapper{ margin: 0 5px;}
-
-
 }
