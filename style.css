@@ -13,9 +13,7 @@
 body{
     margin: 0;
 }
-section{
-    padding: 0 20px;
-}
+section{ padding: 0 20px;}
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -31,6 +29,7 @@ section{
     height: 700px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
 }
 .left-side, .right-side{
     display: flex;
@@ -66,6 +65,7 @@ section{
 }
 .home .banner img{
     width: 100%;
+    max-height: 100%;
     transform-origin: left bottom;
     transition: 500ms ease-in-out;
 }
@@ -123,6 +123,7 @@ section{
 
 
 /* photo album styles */
+.album{ padding: 0 20px;}
 .album-heading{
     text-align: center;
     font-size: 50px;
@@ -130,19 +131,6 @@ section{
     font-weight: 700;
     color: #2D25A0;
     margin: 100px 0 50px;
-}
-.album-heading span{
-    position: relative;
-}
-.album-heading span::after{
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 80%;
-    height: 3px;
-    background: #10437A;
-    transform: translateX(-50%)
 }
 .album .container{
     display: grid;
@@ -333,11 +321,22 @@ footer div:first-of-type{
 
 
 @media only screen and (max-width: 600px) {
+    section{ padding: 0; }
+
     .home .container {
         grid-template-columns: 100%;
+        grid-template-rows: repeat(2, calc(50% - 10px));
         padding: 16px;
     }
+
     .home-title{ font-size: 36px; }
+
+    .right-side{ justify-content: center; }
+    .home .banner img{
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
 
     .players .container{padding-top: 50px;}
 
